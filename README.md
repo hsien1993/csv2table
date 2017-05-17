@@ -9,5 +9,5 @@
 -t, --tab：輸出的格式要不要有縮排，預設是沒有縮排  
 
 舉例：  
-''' python csv2table.py text.csv -s "|cll|" -l table -c 表格 -t '''
+``` python csv2table.py text.csv -s "|cll|" -l table -c 表格 -t ```
 記得style後面接的指令要加上引號，不然執行應該會出問題（因為有'|'這個指令，會被視為是pipe）
