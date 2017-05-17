@@ -9,7 +9,7 @@
 `-t, --tab` 輸出的格式要不要有縮排，預設是沒有縮排  
 
 舉例：  
-``` python csv2table.py test.csv -s "|cll|" -l table -c 表格 -t ```  
+``` python csv2table.py test.csv -s "|cll|" -l "table" -c "表格" -t ```  
 輸出為：  
 ```Latex
 \begin{table}  
@@ -27,5 +27,5 @@
     \caption{表格}  
 \end{table}  
 ```
-記得`--style`後面接的指令要加上引號，不然執行應該會出問題（因為有'|'這個指令，會被視為是pipe）
+記得`--style`後面接的指令要加上引號，不然執行應該會出問題（因為'|'會被視為是pipe）
 
