@@ -9,5 +9,23 @@
 `-t, --tab` 輸出的格式要不要有縮排，預設是沒有縮排  
 
 舉例：  
-``` python csv2table.py text.csv -s "|cll|" -l table -c 表格 -t ```  
-記得style後面接的指令要加上引號，不然執行應該會出問題（因為有'|'這個指令，會被視為是pipe）
+``` python csv2table.py test.csv -s "|cll|" -l table -c 表格 -t ```  
+輸出為：  
+```Latex
+\begin{table}  
+    \centering  
+    \begin{tabular}{|cll|}  
+        \hline  
+         & 項目一 & 項目二\\  
+        \hline  
+        1 & a & 甲\\  
+        \hline  
+        2 & b & 乙\\  
+        \hline  
+    \end{tabular}  
+    \label{table}  
+    \caption{表格}  
+\end{table}  
+```
+記得`--style`後面接的指令要加上引號，不然執行應該會出問題（因為有'|'這個指令，會被視為是pipe）
+
