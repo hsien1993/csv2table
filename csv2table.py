@@ -23,6 +23,8 @@ with open(args.filename) as f:
 
 f = open(args.filename)
 print '\\begin{table}'
+print tab + '\\label{' + args.label + '}'
+print tab + '\\caption{' + args.caption + '}'
 print tab + '\\centering'
 print tab + '\\begin{tabular}' + '{' + style + '}'
 print tab*2 + '\\hline'
@@ -30,8 +32,6 @@ for l in f:
     print tab*2 + l.replace(',',' & ').replace('\n','\\\\')
     print tab*2 + '\\hline'
 print tab + '\\end{tabular}'
-print tab + '\\label{' + args.label + '}'
-print tab + '\\caption{' + args.caption + '}'
 print '\\end{table}'
     
 
